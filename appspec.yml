@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /ntest
+    destination: /usr/share/nginx/html/ntest
+hooks:
+  ApplicationStop:
+
+  BeforeInstall:
+    - location: scripts/install_dependencies
+
+  AfterInstall:
+
+  ApplicationStart:
